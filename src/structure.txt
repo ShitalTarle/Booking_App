@@ -1,0 +1,30 @@
+{
+    "searchHotel":{
+        "city":"",
+        "checkInDate":"",
+        "checkOutDate":"",
+        "adults":"",
+        "children":0
+    },
+    "choseHotel":{
+        "hotelName":""
+    },
+    "roomDetails":{
+        "roomType":"",
+        "noOfRooms":"",
+        "price":"",
+        "totalPrice":"",
+        "Ac/NonAc":""
+    },
+    "personalInformation":{
+
+    },
+    "guestInformation":[],
+    "paymentDetails":{
+        
+    }
+}
+
+{
+    "search hotel":
+}

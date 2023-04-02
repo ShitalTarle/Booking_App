@@ -1,0 +1,68 @@
+
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="parentForm">
+      <form [formGroup]="parentForm">
+        <ng-template matStepLabel>Search Hotel</ng-template>
+        <app-search-hotel></app-search-hotel>
+       
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="parentForm" label="Chose Hotel">
+      <form [formGroup]="parentForm">
+        <app-chose-hotel></app-chose-hotel>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Chose Room</ng-template>
+      <p>You Are Now Done</p>
+      <form [formGroup]="parentForm">
+        <ng-template matStepLabel>Chose Room</ng-template>
+        <app-chose-room></app-chose-room>
+       
+      </form>
+    
+    
+    </mat-step>
+    <mat-step [stepControl]="parentForm" label="Chose Hotel">
+        <form [formGroup]="parentForm">
+            <ng-template matStepLabel>Personal Information</ng-template>
+            <app-personal-information></app-personal-information>
+        
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="parentForm" label="Chose Hotel">
+        <form [formGroup]="parentForm">
+            <ng-template matStepLabel>Guest Information</ng-template>
+            <app-guest-information></app-guest-information>
+         
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="parentForm" label="Chose Hotel">
+        <form [formGroup]="parentForm">
+            <ng-template matStepLabel>Payment Details</ng-template>
+            <app-payment-detail></app-payment-detail>
+        
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="parentForm" label="Chose Hotel">
+        <form [formGroup]="parentForm">
+            <ng-template matStepLabel>Finish Booking</ng-template>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="bookHotel()">Save</button>
+          </div>
+        </form>
+      </mat-step>
+  </mat-stepper>
+  <!-- <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Search Hotel</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step> -->
